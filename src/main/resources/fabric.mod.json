@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "microgrid",
+  "version": "${version}",
+  "name": "MicroGrid",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/microgrid/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "raz.razor.microgrid.client.MicrogridDataGenerator"
+    ],
+    "client": [
+      "raz.razor.microgrid.client.MicrogridClient"
+    ],
+    "main": [
+      "raz.razor.microgrid.Microgrid"
+    ]
+  },
+  "mixins": [
+    "microgrid.mixins.json",
+    {
+      "config": "microgrid.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
