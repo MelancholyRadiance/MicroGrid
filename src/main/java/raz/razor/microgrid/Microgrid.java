@@ -1,7 +1,7 @@
 package raz.razor.microgrid;
 
 import net.fabricmc.api.ModInitializer;
-import raz.razor.microgrid.blocks.entities.NewBlocksTest;
+import raz.razor.microgrid.blocks.ModBlocks;
 
 public class Microgrid implements ModInitializer {
 
@@ -9,6 +9,6 @@ public class Microgrid implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        NewBlocksTest.init();
+        ModBlocks.init();
     }
 }
