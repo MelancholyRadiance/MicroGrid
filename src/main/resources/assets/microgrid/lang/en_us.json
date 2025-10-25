@@ -1,0 +1,8 @@
+{
+  "block.microgrid.item_interface": "Item Interface",
+  "block.microgrid.machine_interface": "Machine Interface",
+  "block.microgrid.spatial_array": "Spatial Array",
+  "block.microgrid.spatial_battery": "Spatial Battery",
+  "block.microgrid.wireless_adapter": "Wireless Adapter",
+  "block.microgrid.energy_entry_point": "Energy Entry Point"
+}
