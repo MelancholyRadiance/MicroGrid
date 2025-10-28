@@ -9,11 +9,12 @@ import net.minecraft.util.Identifier;
 import raz.razor.microgrid.blocks.ModBlocks;
 import raz.razor.microgrid.blocks.entities.ModBlockEntities;
 import raz.razor.microgrid.screen.ItemInterfaceScreenHandler;
+import raz.razor.microgrid.screen.MGScreenHandler;
 
 public class Microgrid implements ModInitializer {
 
     public static final String MOD_ID = "microgrid";
-    public static final ScreenHandlerType<ItemInterfaceScreenHandler> BOX_SCREEN_HANDLER = Registry.register(Registries.SCREEN_HANDLER, Identifier.of(MOD_ID, "item_interface"), new ScreenHandlerType<>(ItemInterfaceScreenHandler::new, FeatureSet.empty()));
+    public static final ScreenHandlerType<MGScreenHandler> BOX_SCREEN_HANDLER = Registry.register(Registries.SCREEN_HANDLER, Identifier.of(MOD_ID, "item_interface"), new ScreenHandlerType<>(ItemInterfaceScreenHandler::new, FeatureSet.empty()));
 
     @Override
     public void onInitialize() {
