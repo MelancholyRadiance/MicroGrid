@@ -6,9 +6,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
-import raz.razor.microgrid.blocks.ModBlocks;
-import raz.razor.microgrid.blocks.WirelessAdapterBlock;
-import raz.razor.microgrid.blocks.entities.ModBlockEntities;
+import raz.razor.microgrid.block.ModBlocks;
+import raz.razor.microgrid.block.entity.ModBlockEntities;
+import raz.razor.microgrid.item.ModItems;
 import raz.razor.microgrid.screen.*;
 
 public class Microgrid implements ModInitializer {
@@ -35,6 +35,7 @@ public class Microgrid implements ModInitializer {
     @Override
     public void onInitialize() {
         ModBlocks.init();
+        ModItems.init();
         ModBlockEntities.init();
     }
 }

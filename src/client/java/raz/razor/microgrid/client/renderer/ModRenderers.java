@@ -1,7 +1,7 @@
 package raz.razor.microgrid.client.renderer;
 
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
-import raz.razor.microgrid.blocks.entities.ModBlockEntities;
+import raz.razor.microgrid.block.entity.ModBlockEntities;
 
 public class ModRenderers {
     public static void init(){

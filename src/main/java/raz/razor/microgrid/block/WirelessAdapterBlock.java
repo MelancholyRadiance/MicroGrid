@@ -1,4 +1,4 @@
-package raz.razor.microgrid.blocks;
+package raz.razor.microgrid.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockState;
@@ -8,28 +8,27 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import raz.razor.microgrid.blocks.entities.EnergyEntryPointBlockEntity;
-import raz.razor.microgrid.blocks.entities.MachineInterfaceBlockEntity;
-import raz.razor.microgrid.blocks.entities.ModBlockEntities;
+import raz.razor.microgrid.block.entity.ModBlockEntities;
+import raz.razor.microgrid.block.entity.WirelessAdapterBlockEntity;
 
-public class EnergyEntryPointBlock extends MGGuiBlock {
+public class WirelessAdapterBlock extends MGGuiBlock {
 
-    protected EnergyEntryPointBlock(Settings settings) {
+    protected WirelessAdapterBlock(Settings settings) {
         super(settings);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.MG_ENERGY_ENTRY_POINT, EnergyEntryPointBlockEntity::tick);
+        return validateTicker(type, ModBlockEntities.MG_WIRELESS_ADAPTER, WirelessAdapterBlockEntity::tick);
     }
 
     @Override
     protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return createCodec(EnergyEntryPointBlock::new);
+        return createCodec(WirelessAdapterBlock::new);
     }
 
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new EnergyEntryPointBlockEntity(pos,state);
+        return new WirelessAdapterBlockEntity(pos,state);
     }
 }

@@ -1,4 +1,4 @@
-package raz.razor.microgrid.blocks.entities;
+package raz.razor.microgrid.block.entity;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import raz.razor.microgrid.Microgrid;
-import raz.razor.microgrid.blocks.ModBlocks;
+import raz.razor.microgrid.block.ModBlocks;
 
 public class ModBlockEntities {
     public static final BlockEntityType<MBBlockEntity> MG_ITEM_INTERFACE =

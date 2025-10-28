@@ -1,4 +1,4 @@
-package raz.razor.microgrid.blocks;
+package raz.razor.microgrid.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;

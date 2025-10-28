@@ -1,4 +1,4 @@
-package raz.razor.microgrid.blocks.entities;
+package raz.razor.microgrid.block.entity;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;

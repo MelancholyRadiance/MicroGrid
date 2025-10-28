@@ -5,7 +5,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
-import raz.razor.microgrid.blocks.entities.MBBlockEntity;
+import raz.razor.microgrid.block.entity.MBBlockEntity;
 
 public class MGScreenHandler extends ScreenHandler {
     protected final PlayerInventory playerInventory;

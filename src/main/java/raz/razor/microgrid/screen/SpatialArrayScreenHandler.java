@@ -2,7 +2,7 @@ package raz.razor.microgrid.screen;
 
 import net.minecraft.entity.player.PlayerInventory;
 import raz.razor.microgrid.Microgrid;
-import raz.razor.microgrid.blocks.entities.MBBlockEntity;
+import raz.razor.microgrid.block.entity.MBBlockEntity;
 
 public class SpatialArrayScreenHandler extends MGScreenHandler {
 

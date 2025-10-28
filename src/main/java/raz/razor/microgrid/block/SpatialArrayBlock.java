@@ -1,4 +1,4 @@
-package raz.razor.microgrid.blocks;
+package raz.razor.microgrid.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockState;
@@ -8,9 +8,8 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import raz.razor.microgrid.blocks.entities.MachineInterfaceBlockEntity;
-import raz.razor.microgrid.blocks.entities.ModBlockEntities;
-import raz.razor.microgrid.blocks.entities.SpatialArrayBlockEntity;
+import raz.razor.microgrid.block.entity.ModBlockEntities;
+import raz.razor.microgrid.block.entity.SpatialArrayBlockEntity;
 
 public class SpatialArrayBlock extends MGGuiBlock {
 

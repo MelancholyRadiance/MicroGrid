@@ -1,4 +1,4 @@
-package raz.razor.microgrid.blocks;
+package raz.razor.microgrid.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockState;
@@ -8,28 +8,27 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import raz.razor.microgrid.blocks.entities.MachineInterfaceBlockEntity;
-import raz.razor.microgrid.blocks.entities.ModBlockEntities;
-import raz.razor.microgrid.blocks.entities.SpatialBatteryBlockEntity;
+import raz.razor.microgrid.block.entity.EnergyEntryPointBlockEntity;
+import raz.razor.microgrid.block.entity.ModBlockEntities;
 
-public class SpatialBatteryBlock extends MGGuiBlock {
+public class EnergyEntryPointBlock extends MGGuiBlock {
 
-    protected SpatialBatteryBlock(Settings settings) {
+    protected EnergyEntryPointBlock(Settings settings) {
         super(settings);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.MG_SPATIAL_BATTERY, SpatialBatteryBlockEntity::tick);
+        return validateTicker(type, ModBlockEntities.MG_ENERGY_ENTRY_POINT, EnergyEntryPointBlockEntity::tick);
     }
 
     @Override
     protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return createCodec(SpatialBatteryBlock::new);
+        return createCodec(EnergyEntryPointBlock::new);
     }
 
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new SpatialBatteryBlockEntity(pos,state);
+        return new EnergyEntryPointBlockEntity(pos,state);
     }
 }
