@@ -5,10 +5,10 @@ import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.render.command.OrderedRenderCommandQueue;
 import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
-import raz.razor.microgrid.blocks.entities.ItemInterfaceBlockEntity;
+import raz.razor.microgrid.blocks.entities.MBBlockEntity;
 import raz.razor.microgrid.client.renderers.states.ItemInterfaceBlockEntityRenderState;
 
-public class ItemInterfaceBlockEntityRenderer implements BlockEntityRenderer<ItemInterfaceBlockEntity, ItemInterfaceBlockEntityRenderState> {
+public class ItemInterfaceBlockEntityRenderer implements BlockEntityRenderer<MBBlockEntity, ItemInterfaceBlockEntityRenderState> {
 
     public ItemInterfaceBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
     }

@@ -1,33 +1,24 @@
 package raz.razor.microgrid.blocks.entities;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.storage.WriteView;
-import net.minecraft.text.Text;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import raz.razor.microgrid.screen.ItemInterfaceScreenHandler;
 
-public class ItemInterfaceBlockEntity extends BlockEntity {
+public class ItemInterfaceBlockEntity extends MBBlockEntity {
     public ItemInterfaceBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MG_ITEM_INTERFACE_BLOCK_ENTITY, pos, state);
     }
 
-    public static void tick(World world, BlockPos blockPos, BlockState blockState, ItemInterfaceBlockEntity itemInterfaceBlockEntity) {
-        world.getPlayers().forEach(x -> x.sendMessage(Text.literal("ESSA"),false));
-    }
-
     @Override
-    protected void writeData(WriteView writeView) {
-        //writeView.putInt("clicks", clicks);
-
-        super.writeData(writeView);
-    }
-
-    @Override
-    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return createNbt(registryLookup);
+    public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
+        // We provide *this* to the screenHandler as our class Implements Inventory
+        // Only the Server has the Inventory at the start, this will be synced to the client in the ScreenHandler
+        return new ItemInterfaceScreenHandler(syncId, playerInventory, this);
     }
 
 }

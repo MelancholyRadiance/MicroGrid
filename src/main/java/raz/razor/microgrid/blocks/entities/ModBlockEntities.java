@@ -11,7 +11,7 @@ import raz.razor.microgrid.Microgrid;
 import raz.razor.microgrid.blocks.ModBlocks;
 
 public class ModBlockEntities {
-    public static final BlockEntityType<ItemInterfaceBlockEntity> MG_ITEM_INTERFACE_BLOCK_ENTITY =
+    public static final BlockEntityType<MBBlockEntity> MG_ITEM_INTERFACE_BLOCK_ENTITY =
             register("item_interface", ItemInterfaceBlockEntity::new, ModBlocks.MG_ITEM_INTERFACE);
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
