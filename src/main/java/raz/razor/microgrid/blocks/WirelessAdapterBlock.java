@@ -20,7 +20,7 @@ public class WirelessAdapterBlock extends MGGuiBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.MG_WIRELESS_ADAPTER, MachineInterfaceBlockEntity::tick);
+        return validateTicker(type, ModBlockEntities.MG_WIRELESS_ADAPTER, WirelessAdapterBlockEntity::tick);
     }
 
     @Override

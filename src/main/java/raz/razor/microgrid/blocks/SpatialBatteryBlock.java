@@ -20,7 +20,7 @@ public class SpatialBatteryBlock extends MGGuiBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.MG_SPATIAL_BATTERY, MachineInterfaceBlockEntity::tick);
+        return validateTicker(type, ModBlockEntities.MG_SPATIAL_BATTERY, SpatialBatteryBlockEntity::tick);
     }
 
     @Override
