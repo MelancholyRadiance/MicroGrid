@@ -17,7 +17,7 @@ public abstract class MBBlockEntity extends BlockEntity implements NamedScreenHa
         super(type, pos, state);
     }
 
-    public static void tick(World world, BlockPos blockPos, BlockState blockState, MBBlockEntity itemInterfaceBlockEntity) {
+    public static void tick(World world, BlockPos blockPos, BlockState blockState, MBBlockEntity blockEntity) {
     }
 
     public Text getDisplayName() {

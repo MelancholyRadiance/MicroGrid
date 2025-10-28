@@ -8,6 +8,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import raz.razor.microgrid.blocks.entities.MBBlockEntity;
 
 public abstract class MGGuiBlock extends BlockWithEntity {
     protected MGGuiBlock(Settings settings) {

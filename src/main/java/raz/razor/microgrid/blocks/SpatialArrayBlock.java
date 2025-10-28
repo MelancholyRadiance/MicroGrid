@@ -8,27 +8,28 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import raz.razor.microgrid.blocks.entities.ItemInterfaceBlockEntity;
+import raz.razor.microgrid.blocks.entities.MachineInterfaceBlockEntity;
 import raz.razor.microgrid.blocks.entities.ModBlockEntities;
+import raz.razor.microgrid.blocks.entities.SpatialArrayBlockEntity;
 
-public class ItemInterfaceBlock extends MGGuiBlock {
+public class SpatialArrayBlock extends MGGuiBlock {
 
-    protected ItemInterfaceBlock(Settings settings) {
+    protected SpatialArrayBlock(Settings settings) {
         super(settings);
     }
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return validateTicker(type, ModBlockEntities.MG_ITEM_INTERFACE, ItemInterfaceBlockEntity::tick);
+        return validateTicker(type, ModBlockEntities.MG_SPATIAL_ARRAY, MachineInterfaceBlockEntity::tick);
     }
 
     @Override
     protected MapCodec<? extends BlockWithEntity> getCodec() {
-        return createCodec(ItemInterfaceBlock::new);
+        return createCodec(SpatialArrayBlock::new);
     }
 
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new ItemInterfaceBlockEntity(pos,state);
+        return new SpatialArrayBlockEntity(pos,state);
     }
 }
