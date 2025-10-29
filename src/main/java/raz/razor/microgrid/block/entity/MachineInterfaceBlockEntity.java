@@ -7,7 +7,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.math.BlockPos;
 import raz.razor.microgrid.screen.MachineInterfaceScreenHandler;
 
-public class MachineInterfaceBlockEntity extends MBBlockEntity {
+public class MachineInterfaceBlockEntity extends MGBlockEntity {
     public MachineInterfaceBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MG_MACHINE_INTERFACE, pos, state);
     }

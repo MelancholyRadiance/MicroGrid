@@ -7,7 +7,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.math.BlockPos;
 import raz.razor.microgrid.screen.SpatialArrayScreenHandler;
 
-public class SpatialArrayBlockEntity extends MBBlockEntity {
+public class SpatialArrayBlockEntity extends MGBlockEntity {
     public SpatialArrayBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MG_SPATIAL_ARRAY, pos, state);
     }

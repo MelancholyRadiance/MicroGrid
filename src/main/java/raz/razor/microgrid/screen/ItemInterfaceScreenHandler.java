@@ -1,7 +1,7 @@
 package raz.razor.microgrid.screen;
 
 import net.minecraft.entity.player.PlayerInventory;
-import raz.razor.microgrid.block.entity.MBBlockEntity;
+import raz.razor.microgrid.block.entity.MGBlockEntity;
 
 public class ItemInterfaceScreenHandler extends MGScreenHandler {
 
@@ -9,7 +9,7 @@ public class ItemInterfaceScreenHandler extends MGScreenHandler {
         super(ModScreenHandlers.ITEM_INTERFACE_SCREEN_HANDLER, syncId,playerInventory,null);
     }
 
-    public ItemInterfaceScreenHandler(int syncId, PlayerInventory playerInventory, MBBlockEntity blockEntity) {
+    public ItemInterfaceScreenHandler(int syncId, PlayerInventory playerInventory, MGBlockEntity blockEntity) {
         super(ModScreenHandlers.ITEM_INTERFACE_SCREEN_HANDLER, syncId,playerInventory,blockEntity);
     }
 

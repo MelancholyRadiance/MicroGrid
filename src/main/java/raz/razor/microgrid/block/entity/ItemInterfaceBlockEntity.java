@@ -7,7 +7,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.math.BlockPos;
 import raz.razor.microgrid.screen.ItemInterfaceScreenHandler;
 
-public class ItemInterfaceBlockEntity extends MBBlockEntity {
+public class ItemInterfaceBlockEntity extends MGBlockEntity {
     public ItemInterfaceBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MG_ITEM_INTERFACE, pos, state);
     }

@@ -7,7 +7,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.math.BlockPos;
 import raz.razor.microgrid.screen.SpatialBatteryScreenHandler;
 
-public class SpatialBatteryBlockEntity extends MBBlockEntity {
+public class SpatialBatteryBlockEntity extends MGBlockEntity {
     public SpatialBatteryBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MG_SPATIAL_BATTERY, pos, state);
     }

@@ -7,7 +7,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.math.BlockPos;
 import raz.razor.microgrid.screen.WirelessAdapterScreenHandler;
 
-public class WirelessAdapterBlockEntity extends MBBlockEntity {
+public class WirelessAdapterBlockEntity extends MGBlockEntity {
     public WirelessAdapterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MG_WIRELESS_ADAPTER, pos, state);
     }

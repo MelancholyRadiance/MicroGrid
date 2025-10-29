@@ -7,7 +7,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.math.BlockPos;
 import raz.razor.microgrid.screen.EnergyEntryPointScreenHandler;
 
-public class EnergyEntryPointBlockEntity extends MBBlockEntity {
+public class EnergyEntryPointBlockEntity extends MGBlockEntity {
     public EnergyEntryPointBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.MG_ENERGY_ENTRY_POINT, pos, state);
     }

@@ -5,13 +5,13 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
-import raz.razor.microgrid.block.entity.MBBlockEntity;
+import raz.razor.microgrid.block.entity.MGBlockEntity;
 
 public class MGScreenHandler extends ScreenHandler {
     protected final PlayerInventory playerInventory;
-    protected final MBBlockEntity blockEntity;
+    protected final MGBlockEntity blockEntity;
 
-    public MGScreenHandler(ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory, MBBlockEntity blockEntity) {
+    public MGScreenHandler(ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory, MGBlockEntity blockEntity) {
         super(type, syncId);
         this.playerInventory = playerInventory;
         this.blockEntity = blockEntity;
