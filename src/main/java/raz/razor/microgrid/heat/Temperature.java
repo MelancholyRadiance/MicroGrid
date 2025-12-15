@@ -1,9 +1,8 @@
-package raz.razor.microgrid;
+package raz.razor.microgrid.heat;
 
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.storage.ReadView;
 import net.minecraft.storage.WriteView;
+import raz.razor.microgrid.Microgrid;
 
 public class Temperature {
     private static final String KELVINS_NBT_KEY = Microgrid.MOD_ID + ":kelvins";

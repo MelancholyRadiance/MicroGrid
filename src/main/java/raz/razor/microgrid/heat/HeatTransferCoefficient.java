@@ -1,4 +1,4 @@
-package raz.razor.microgrid;
+package raz.razor.microgrid.heat;
 
 public class HeatTransferCoefficient {
     /*

@@ -16,9 +16,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import raz.razor.microgrid.HeatTransferCoefficient;
-import raz.razor.microgrid.HeatTransferManager;
-import raz.razor.microgrid.Temperature;
+import raz.razor.microgrid.heat.HeatTransferCoefficient;
+import raz.razor.microgrid.heat.HeatTransferManager;
+import raz.razor.microgrid.heat.Temperature;
 import raz.razor.microgrid.Util;
 import raz.razor.microgrid.block.ITempBlock;
 

@@ -4,17 +4,16 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import raz.razor.microgrid.heat.HeatTransferCoefficient;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 public class Util {
     public static Collection<BlockEntity> getAdjBlockEntities(World world, BlockPos pos){
-        ArrayList<BlockEntity> states = new ArrayList<>();
-        for (var dir : Direction.values()){
-            states.add(world.getBlockEntity(pos.offset(dir)));
-        }
-        return states;
+        return Arrays.stream(Direction.values())
+                .map((dir) -> world.getBlockEntity(pos.offset(dir)))
+                .toList();
     }
 
     /*
@@ -27,7 +26,7 @@ public class Util {
         In Watts [J/s]
      */
 
-    public static float calcRoHF(HeatTransferCoefficient htc,float tempVariation,float area,float lengthOfMaterial){
+    public static float calcRoHF(HeatTransferCoefficient htc, float tempVariation, float area, float lengthOfMaterial){
         return -(htc.W_m2K) * area * tempVariation / lengthOfMaterial;
     }
 

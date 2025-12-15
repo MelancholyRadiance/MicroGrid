@@ -3,8 +3,8 @@ package raz.razor.microgrid.block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import raz.razor.microgrid.HeatTransferCoefficient;
-import raz.razor.microgrid.Temperature;
+import raz.razor.microgrid.heat.HeatTransferCoefficient;
+import raz.razor.microgrid.heat.Temperature;
 
 public interface ITempBlock {
 

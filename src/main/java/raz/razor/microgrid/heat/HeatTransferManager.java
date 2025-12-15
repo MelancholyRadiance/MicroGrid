@@ -1,13 +1,12 @@
-package raz.razor.microgrid;
+package raz.razor.microgrid.heat;
 
-import it.unimi.dsi.fastutil.bytes.ByteArrayFrontCodedList;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
+import raz.razor.microgrid.Util;
 import raz.razor.microgrid.block.entity.MGBlockEntity;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HeatTransferManager {

@@ -30,8 +30,8 @@ public class MGBlockEntityRenderer implements BlockEntityRenderer<MGBlockEntity,
 
     @Override
     public void updateRenderState(MGBlockEntity blockEntity, MGBlockEntityRenderState state, float tickProgress, Vec3d cameraPos, @Nullable ModelCommandRenderer.CrumblingOverlayCommand crumblingOverlay) {
-        BlockEntityRenderer.super.updateRenderState(blockEntity, state, tickProgress, cameraPos, crumblingOverlay);
         state.temp = blockEntity.getTemp();
+        BlockEntityRenderer.super.updateRenderState(blockEntity, state, tickProgress, cameraPos, crumblingOverlay);
     }
 
     @Override
@@ -58,13 +58,13 @@ public class MGBlockEntityRenderer implements BlockEntityRenderer<MGBlockEntity,
             isTarget = diff == 0;
         }
 
-        if(shouldRenderTempGlobal.isEmpty()){
-            shouldRenderTempGlobal = Optional.of(MinecraftClient.getInstance().player.getEquippedStack(EquipmentSlot.MAINHAND).getItem() != Items.IRON_HELMET);
-        }
+        //if(shouldRenderTempGlobal.isEmpty()){
+        //    shouldRenderTempGlobal = Optional.of(MinecraftClient.getInstance().player.getEquippedStack(EquipmentSlot.MAINHAND).getItem() != Items.IRON_HELMET);
+        //}
 
-        if(shouldRenderTempGlobal.get()&&!isTarget) {
-            return;
-        }
+        //if(shouldRenderTempGlobal.get()&&!isTarget) {
+        //    return;
+        //}
 
         matrices.push();
         matrices.translate(1,1,0);

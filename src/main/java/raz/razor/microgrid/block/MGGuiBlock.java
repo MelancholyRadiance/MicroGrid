@@ -11,7 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import raz.razor.microgrid.Temperature;
+import raz.razor.microgrid.heat.Temperature;
 import raz.razor.microgrid.block.entity.MGBlockEntity;
 
 public abstract class MGGuiBlock extends BlockWithEntity {
