@@ -81,9 +81,8 @@ public class HeatTransferManager {
     }
 
     public static void endTick(MinecraftServer server){
-        for (ServerPlayerEntity serverPlayerEntity : server.getPlayerManager().getPlayerList()) {
-           serverPlayerEntity.sendMessage(Text.literal(server.getTicks()+": "+ transfers.size()+" "+totalTransferredW+"W"));
-        }
+        //   serverPlayerEntity.sendMessage(Text.literal(server.getTicks()+": "+ transfers.size()+" "+totalTransferredW+"W"));
+        //}
         HeatTransferManager.applyChanges();
         transfers.clear();
     }
